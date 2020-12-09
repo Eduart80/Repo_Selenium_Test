@@ -15,7 +15,7 @@ public class Web {
         public void initDriver() {
             System.setProperty("webdriver.chrome.driver","./chrome/chromedriver.exe");
             driver = new ChromeDriver();
-            driver.get("https://www.hotels.com/");
+            driver.get("https://www.facebook.com/");
             driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         }
 

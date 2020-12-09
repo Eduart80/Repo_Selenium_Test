@@ -1,21 +1,23 @@
 package TestCase;
 
+import Pages.BasePage;
 import Pages.Hotels.LandingPageMethods;
 import WebDriver.Web;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class TestCase extends Web {
-
+    BasePage bp = new BasePage();
+    LandingPageMethods lpage = new LandingPageMethods();
 
     // Testcase 1: User is able to click Select button
     /*
         Landing
             search
      */
-    @Test
+    //@Test
     public void verifySeachIsClickable() {
-        LandingPageMethods lpage = new LandingPageMethods();
+
         Assert.assertTrue(lpage.isSearchButtonEnabled(), "Search button is not enabled");
     }
 
@@ -26,7 +28,7 @@ public class TestCase extends Web {
             Checkout
             Briefcase
      */
-    @Test
+    //@Test
     public void verifyBriefcaseCount() {
         LandingPageMethods lpage = new LandingPageMethods();
         String checkIn = "10";
@@ -36,4 +38,5 @@ public class TestCase extends Web {
         lpage.selectCheckOutDate(checkOut);
         Assert.assertEquals(lpage.getBriefcaseText(), expNights, "");
     }
+
 }

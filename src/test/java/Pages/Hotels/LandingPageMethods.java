@@ -18,10 +18,14 @@ public class LandingPageMethods extends BasePage {
 
 
 
+
     // Method to interact with webElement (represent by above Locators)
     public void clickSearch() {
         clickThis(searchButton);
     }
+
+
+
 
 
     public boolean isSearchButtonEnabled() {
